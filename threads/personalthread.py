@@ -20,7 +20,7 @@ def getTime(name):
 
 	randSleepTime = random.randint(1,5)
 
-	time.sleep(randSleepTime)
+	time.sleep(4)
 
 thread1 = CustThread("1")
 thread2 = CustThread("2")
@@ -33,7 +33,7 @@ print("Thread 2 Alive :", thread2.is_alive())
 
 print("Thread 1 Name :", thread1.getName())
 print("Thread 2 Name :", thread1.getName())
-
 thread1.join()
 thread2.join()
+print("End of program")
 
