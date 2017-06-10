@@ -1,20 +1,20 @@
+#! python3
 import re
 import webbrowser
 import requests
 from bs4 import BeautifulSoup
+import sys
 
 regex = re.compile(r'(https?:\/\/.*?\.(?:png|jpg))')
 
-link = input()
+link = ''.join(sys.argv[1:])
 
-print(re.findall(regex,link))
 
 r = requests.get(link)
 
 new=2
 
 meh =re.findall(regex,r.text)
-print(meh)
 url = meh[0]
 
 webbrowser.open(url,new=new)
